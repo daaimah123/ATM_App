@@ -1,8 +1,10 @@
 let balance = 80000;
 
 window.onload = function(){
-    document.getElementById("withdraw").style.display = "none";
     document.getElementById("selection").style.display = "none";
+    document.getElementById("withdraw").style.display = "none";
+    document.getElementById("deposit").style.display = "none";
+    document.getElementById("finalScreen").style.display = "none";
 }
 
 function authenticatedUser(){
@@ -17,10 +19,11 @@ function authenticatedUser(){
     }
 }
 
-function showWithdrawalResult(){
-    const amountId = document.getElementById('number').value;
+function withdrawal(){
+    // To-Do: handle increments of 5s and only distribute 5, 10, 20, 50, and 100 bills
+    const amountId = document.getElementById('withdrawalNumber').value;
     
-    document.getElementById("login").style.display = "none";
+    document.getElementById("authenticate").style.display = "none";
     document.getElementById("selection").style.display = "none";
     document.getElementById("authenticateResult").style.display = "none";
     document.getElementById("withdraw").style.display = "inline-block";
@@ -32,4 +35,39 @@ function showWithdrawalResult(){
     } else {
         document.getElementById('withdrawalResult').innerHTML = `Please enter a withdrawal amount greater than zero!`;
     }
+}
+
+function deposit(){
+    // To-Do: add any value of bills
+    document.getElementById("authenticate").style.display = "none";
+    document.getElementById("selection").style.display = "none";
+    document.getElementById("authenticateResult").style.display = "none";
+    document.getElementById("deposit").style.display = "inline-block";
+}
+
+// Do I want to check the balance on each screen?
+// function checkBalance(){
+//     document.getElementById("authenticate").style.display = "none";
+//     document.getElementById("selection").style.display = "none";
+//     document.getElementById("authenticateResult").style.display = "none";
+//     document.getElementById("checkBalance").style.display = "inline-block";
+// }
+
+function exit(){
+    document.getElementById("authenticate").style.display = "none";
+    document.getElementById("selection").style.display = "none";
+    document.getElementById("authenticateResult").style.display = "none";
+    document.getElementById("finalScreen").style.display = "inline-block";
+}
+
+function backToSect(){
+    document.getElementById("selection").style.display = "inline-block";
+    document.getElementById("deposit").style.display = "none";
+    document.getElementById("withdraw").style.display = "none";
+}
+
+function loginUser(){
+    // TO-DO: handle clearing username and password values
+    document.getElementById("finalScreen").style.display = "none";
+    document.getElementById("authenticate").style.display = "inline-block";
 }
