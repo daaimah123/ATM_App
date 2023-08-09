@@ -5,19 +5,36 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div>Username <input type="text" id="username"></div>
-        <br>
-        <div>Password <input type="password" id="password"></div>
-        <br>
-        <button onclick="authenticatedUser()" id="authenticatebutton">Authenticate User</button>
-        <h3 id="authenticateresult"></h3>
+        <div id="login">
+            <div>Username <input type="text" id="username"></div>
+            <br>
+            <div>Password <input type="password" id="password"></div>
+            <br>
+            <button onclick="authenticatedUser()" id="authenticateBtn">Authenticate User</button>
+        </div>
+        <h3 id="authenticateResult"></h3>
+
+
+        <div id="selection">
+            <h3>What would you like to do today?</h3>
+            <button onclick="showWithdrawalResult()" class="selectionBtn" id="withdrawSelection">Withdraw</button>
+            <br>
+            <button class="selectionBtn" id="depositSelection">Deposit</button>
+            <br>
+            <button class="selectionBtn" id="checkNewBalance">Check Balance</button>
+            <br>
+            <button class="selectionBtn" id="exitSelection">Exit</button>
+        </div>
 
         <br>
-        <div id="amountDiv">Amount <input type="number" id="number"></div>
-        <br>
-        <button onclick="showWithdrawalResult()" id="withdrawalbutton">Withdraw</button>
-        <h3 id="withdrawalresult"></h3>
-        <h3 id="withdrawalbanknotes"></h3>
+        <div id="withdraw">
+            <div id="amountDiv">Amount <input type="number" id="number"></div>
+            <br>
+            <button onclick="showWithdrawalResult()" id="withdrawalBtn">Withdraw</button>
+            <h3 id="withdrawalResult"></h3>
+            <h3 id="withdrawalBanknotes"></h3>
+        </div>
+
 
         <script src="js/index.js"></script>
     </body>
