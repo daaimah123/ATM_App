@@ -5,16 +5,19 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        Username <input type="text" id="username">
+        <div>Username <input type="text" id="username"></div>
         <br>
-        Password <input type="password" id="password">
+        <div>Password <input type="password" id="password"></div>
         <br>
-        Amount <input type="number" id="number">
-        <br>
-        <button onclick="showResult()">Withdraw</button>
+        <button onclick="authenticatedUser()" id="authenticatebutton">Authenticate User</button>
+        <h3 id="authenticateresult"></h3>
 
-        <h3 id="result1"></h3>
-        <h3 id="result2"></h3>
+        <br>
+        <div id="amountDiv">Amount <input type="number" id="number"></div>
+        <br>
+        <button onclick="showWithdrawalResult()" id="withdrawalbutton">Withdraw</button>
+        <h3 id="withdrawalresult"></h3>
+        <h3 id="withdrawalbanknotes"></h3>
 
         <script src="js/index.js"></script>
     </body>

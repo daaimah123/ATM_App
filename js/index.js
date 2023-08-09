@@ -1,21 +1,31 @@
+let balance = 80000;
 
-function showResult(){
+window.onload = function(){
+    document.getElementById("amountDiv").style.visibility = "hidden";
+    document.getElementById("withdrawalbutton").style.visibility = "hidden";
+}
+
+function authenticatedUser(){
     usernameId = document.getElementById('username').value;
     passwordId = document.getElementById('password').value;
-    amountId = document.getElementById('number').value;
 
     if(usernameId == 'admin' && passwordId == 'admin'){
-        document.getElementById('result1').innerHTML = 'Welcome Administrator!';
-        if(amountId <= 0){
-            document.getElementById('result2').innerHTML = `Please enter a withdrawal amount!`;
-        } else if(amountId > 5000){
-            document.getElementById('result2').innerHTML = `You are withdrawing ${amountId} which is more than your daily withdrawal limit of $5,000.`;
-        } else if(amountId > 0 && amountId < 5000){
-            document.getElementById('result2').innerHTML = `You are withdrawing ${amountId} which is less than your daily withdrawal limit of $5,000.`;
-        } else {
-            document.getElementById('result2').innerHTML = `You are withdrawing ${amountId} which is exactly your daily withdrawal limit of $5,000.`;
-        }
+        document.getElementById('authenticateresult').innerHTML = `Welcome Administrator! Your balance before any transactions today is $${balance}.`;
+        document.getElementById("amountDiv").style.visibility = "visible";
+        document.getElementById('withdrawalbutton').style.visibility = 'visible';
     } else {
-        document.getElementById('result1').innerHTML = `Username or Password Incorrect!`;
+        document.getElementById('authenticateresult').innerHTML = `Username or Password Incorrect!`;
+    }
+}
+
+function showWithdrawalResult(){
+    amountId = document.getElementById('number').value;
+    
+    if (amountId > 0 && amountId <= balance){
+        document.getElementById('withdrawalresult').innerHTML = `You are attempting to withdraw $${amountId}.`;
+    } else if (amountId > balance){
+        document.getElementById('withdrawalresult').innerHTML = `You are attempting to withdraw more than your balance! Please enter a different amount.`;
+    } else {
+        document.getElementById('withdrawalresult').innerHTML = `Please enter a withdrawal amount greater than zero!`;
     }
 }
