@@ -1,5 +1,5 @@
 Facts: 
-- USD banknotes accepted: 1, 2, 5, 10, 20, 50, 100
+- USD banknotes accepted
 - Username: admin
 - Password: admin
 
