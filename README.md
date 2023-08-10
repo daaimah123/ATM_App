@@ -11,3 +11,4 @@ Future additions:
 - Adjust app for accessibility
 - Unit Testing
 
+![ATM APP GIF](https://github.com/daaimah123/ATM_App/blob/main/ATM_GIF.gif)
