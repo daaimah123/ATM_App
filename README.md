@@ -10,3 +10,4 @@ Future additions:
 - Create a backend server (NodeJS/Express) to handle transactions
 - Adjust app for accessibility
 - Unit Testing
+
