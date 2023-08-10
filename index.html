@@ -5,50 +5,52 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div id="authenticate">
-            <div>Username <input type="text" id="username"></div>
-            <br>
-            <div>Password <input type="password" id="password"></div>
-            <br>
-            <button onclick="authenticatedUser()" id="authenticateBtn">Authenticate User</button>
-        </div>
-        <h3 id="authenticateResult"></h3>
+        <div id="screen">
+            <div id="authenticate">
+                <div>Username <input class="loginField" type="text" id="username"></div>
+                <br>
+                <div>Password <input class="loginField" type="password" id="password"></div>
+                <br>
+                <button onclick="authenticatedUser()" id="authenticateBtn">Authenticate User</button>
+            </div>
+            <h3 id="authenticateResult"></h3>
 
 
-        <div id="selection">
-            <h3>What would you like to do today?</h3>
-            <button onclick="withdrawal()" class="selectionBtn" id="withdrawSelection">Withdraw</button>
-            <br>
-            <button onclick="deposit()" class="selectionBtn" id="depositSelection">Deposit</button>
-            <br>
-            <!-- <button onclick="checkBalance()" class="selectionBtn" id="checkNewBalance">Check Balance</button>
-            <br> -->
-            <button onclick="exit()" class="selectionBtn" id="exitSelection">Exit</button>
-        </div>
+            <div id="selection">
+                <h3>What would you like to do today?</h3>
+                <button onclick="withdrawal()" class="selectionBtn" id="withdrawSelection">Withdraw</button>
+                <br>
+                <button onclick="deposit()" class="selectionBtn" id="depositSelection">Deposit</button>
+                <br>
+                <!-- <button onclick="checkBalance()" class="selectionBtn" id="checkNewBalance">Check Balance</button>
+                <br> -->
+                <button onclick="exit()" class="selectionBtn" id="exitSelection">Exit</button>
+            </div>
 
-        <br>
-        <div id="withdraw">
-            <div>Amount <input type="number" id="withdrawalNumber"></div>
             <br>
-            <button onclick="withdrawal()" id="withdrawalBtn">Withdraw</button>
-            <button onclick="backToSect()" id="backToSect">Back to Selections</button>
-            <h3 id="withdrawalResult"></h3>
-            <h3 id="withdrawalBanknotes"></h3>
-        </div>
+            <div id="withdraw">
+                <div>Amount <input type="number" id="withdrawalNumber"></div>
+                <br>
+                <button onclick="withdrawal()" id="withdrawalBtn">Withdraw</button>
+                <button onclick="backToSect()" id="backToSect">Back to Selections</button>
+                <h3 id="withdrawalResult"></h3>
+                <!-- <h3 id="withdrawalBanknotes"></h3> -->
+            </div>
 
-        <br>
-        <div id="deposit">
-            <div>Deposit <input type="number" id="depositNumber"></div>
             <br>
-            <button onclick="deposit()" id="depositBtn">Deposit</button>
-            <button onclick="backToSect()" id="backToSect">Back to Selections</button>
-            <h3 id="depositResult"></h3>
-            <h3 id="depositBanknotes"></h3>
-        </div>
+            <div id="deposit">
+                <div>Deposit <input type="number" id="depositNumber"></div>
+                <br>
+                <button onclick="deposit()" id="depositBtn">Deposit</button>
+                <button onclick="backToSect()" id="backToSect">Back to Selections</button>
+                <h3 id="depositResult"></h3>
+                <!-- <h3 id="depositBanknotes"></h3> -->
+            </div>
 
-        <div id="finalScreen">
-            <h1 id="exitScreen">Thank you for using the ATM. Have a great day! ☀️ </h1>
-            <button onclick="loginUser()" id="login">Login</button>
+            <div id="finalScreen">
+                <h1 id="exitScreen">Thank you for using the ATM. Have a great day! ☀️ </h1>
+                <button onclick="loginUser()" id="login">Login</button>
+            </div>
         </div>
 
         <script src="js/index.js"></script>

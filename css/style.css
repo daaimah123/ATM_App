@@ -1,3 +1,15 @@
 button {
     border: red dotted 5px;
 }
+
+body {
+    position: relative;
+}
+
+#screen {
+    border: blue solid 5px;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+}
+  
