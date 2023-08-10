@@ -13,7 +13,8 @@
                 <br>
                 <button onclick="authenticatedUser()" id="authenticateBtn">Authenticate User</button>
             </div>
-            <h3 id="authenticateResult"></h3>
+            <h3 id="authenticateResult1"></h3>
+            <h3 id="authenticateResult2"></h3>
 
 
             <div id="selection">
@@ -31,10 +32,9 @@
             <div id="withdraw">
                 <div>Amount <input type="number" id="withdrawalNumber"></div>
                 <br>
-                <button onclick="withdrawal()" id="withdrawalBtn">Withdraw</button>
-                <button onclick="backToSect()" id="backToSect">Back to Selections</button>
+                <button onclick="withdrawal()" class="withdrawalBtn">Withdraw</button>
+                <button onclick="backToSect()" class="withdrawalBtn" id="backToSect">Back to Selections</button>
                 <h3 id="withdrawalResult"></h3>
-                <!-- <h3 id="withdrawalBanknotes"></h3> -->
             </div>
 
             <br>
@@ -44,7 +44,6 @@
                 <button onclick="deposit()" id="depositBtn">Deposit</button>
                 <button onclick="backToSect()" id="backToSect">Back to Selections</button>
                 <h3 id="depositResult"></h3>
-                <!-- <h3 id="depositBanknotes"></h3> -->
             </div>
 
             <div id="finalScreen">
